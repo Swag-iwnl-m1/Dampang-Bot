@@ -15,10 +15,12 @@ intents = discord.Intents.default()
 intents.message_content = True 
 
 Brainrot = [
-    "Berlele", "Ariz ajalah", "Abyan caboel", "Ariz mabok", "Boni Hyper", 
+      "Berlele", "Ariz ajalah", "Abyan caboel", "Ariz mabok", "Boni Hyper", 
     "Helmy miliarder", "Aryadikan", "Ketawa steak😂", "Lesley mcl", "Harith Binal",
     "Entitas fikes", "Geprek bu de", "Indomie dobel", "Gus Vigo", "Dark sistem",
-    "Abyankan"
+    "Abyankan", "KluivertOut", "RAM 2GB", "SSD SATA" , "Ketec Keqing", "Geprek Jesen", 
+    "Steak Ariz", "Warnet SuperNova", "Bakwan Teteh", "Yae Mikocok", "Mouse Johta", 
+    "Johta Ninja 250cc", "Helmy F1", "Alip XSR", "Lele BKT", "Anomali Priok", "Kalkulus 3",
 ]
 
 Brainrot_gambar = [
@@ -61,7 +63,69 @@ class MyClient(commands.Bot):
             await message.channel.send(f'Harith') 
 
         if message.content.startswith('$parah lu byan'):
-            await message.channel.send(f'Apalah si {message.author}')             
+            await message.channel.send(f'Apalah si {message.author}')
+
+        if message.content.startswith('$abyan'):
+            await message.channel.send(f'Ingat {message.author} awal bukanlah akhir')
+
+        if message.content.startswith('$abyan'):
+            await message.channel.send(f'Ingat {message.author} awal bukanlah akhir')
+
+        if message.content.startswith('$ariz'):
+            await message.channel.send(f'Login emel @Everyone')
+
+        if message.content.startswith('$aryadi'):
+            await message.channel.send(f'{message.author} Serlok tak parani')
+
+        if message.content.startswith('$johta'):
+            await message.channel.send(f'Cepatkan Tobat {message.author}')
+
+        if message.content.startswith('$helmy'):
+            await message.channel.send(f'{message.author} Gagal coba lagi {message.author} Gagal coba lagi... @Everyone GAGALL COBA LAGI')
+
+        if message.content.startswith('$jesen'):
+            await message.channel.send(f'Gacha Apa Hari ini ? @Everyone')
+
+        if message.content.startswith('$boni'):
+            await message.channel.send(f'{message.author} mau liat Lance atau Ling?')
+
+        if message.content.startswith('$ferdi'):
+            await message.channel.send(f'Tunggu menit 7 {message.author} aku akan kembali')
+
+        if message.content.startswith('$giparen'):
+            await message.channel.send(f'Lu marah? {message.author}')
+
+        if message.content.startswith('$el'):
+            await message.channel.send(f'Cukup jangan main genshin lagi @Everyone')
+
+        if message.content.startswith('$sahur'):
+            await message.channel.send(f'Tung Tung Tung Sahur @Everyone')
+
+        if message.content.startswith('$wwz'):
+            await message.channel.send(f'Ingfo Mabar @Everyone')
+
+        if message.content.startswith('$valorant'):
+            await message.channel.send(f'@Everyone Ingfo Perkopilorant')
+
+        if message.content.startswith('$roblox'):
+            await message.channel.send(f'ingfokan perobloxan @Everyone')
+
+        if message.content.startswith('$last war'):
+            await message.channel.send(f'Inilah gem terbaik, selamat {message.author} anda telah mencapai titik tertinggi pergamingan duniawi terutama game Mobile. {message.author} berbahagialah anda sudah termasuk 1% orang yang berkesempatan untuk memainkan game terbaik di dunia ini. Jangan lupa kalo di toiet main apa? @Everyone LAST WAR LAH !!!')
+
+        if message.content.startswith('$validasi'):
+            await message.channel.send(f'{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}') 
+
+        if message.content.startswith('$meowtler'):
+            await message.channel.send(f'DAS WAR EIN BEFEHL! DER ANGRIFF STEINER WAR EIN BEFEHL !!!') 
+       
+        if message.content.startswith('$meowtob'):
+            await message.channel.send(f'Tob tobi tob tob tobi tob tob tobi tob tob tobaliy') 
+
+        if message.content.startswith('$meowcina'):
+            await message.channel.send(f'将大局逆转吧!')    
+    
+                     
 
             
     async def on_reaction_add(self, reaction, user):
@@ -187,6 +251,48 @@ async def say_hello(interaction: discord.Interaction):
 @client.tree.command(name="kucai", description="anak kucai")
 async def say_hello(interaction: discord.Interaction):
     await interaction.response.send_message("TOHAPOK KAU ANAK KUCAI")
+
+@client.tree.command(name="help", description="Show all available commands")
+async def help_command(interaction: discord.Interaction):
+    help_text = (
+         "**🎵 Music Commands:**\n"
+        "`/join` - Join your voice channel\n"
+        "`/play [query]` - Play music from YouTube\n"
+        "`/pause` - Pause the current song\n"
+        "`/resume` - Resume the paused song\n"
+        "`/skip` - Skip to the next song\n"
+        "`/queue` - Show the current queue\n"
+        "`/loop` - Toggle loop mode\n"
+        "`/stop` - Stop playing and clear queue\n"
+        "`/clear` - Clear the queue\n"
+        "`/leave` - Leave the voice channel\n\n"
+        "**💬 Chat Commands:**\n"
+        "`$hello` - Say hello\n"
+        "`$baik` - Menyampaikan harapan baik\n"
+        "`$sombong lu byan` - Respon untuk byan\n"
+        "`$roblox` - Gas mabar\n"
+        "`$hero favorit` - Jawab hero favorit\n"
+        "`$parah lu byan` - Respon untuk byan\n"
+        "`$abyan` - Motivasi tentang awal dan akhir\n"
+        "`$ariz` - Login emel\n"
+        "`$aryadi` - Serlok\n"
+        "`$johta` - Cepatkan tobat\n"
+        "`$helmy` - Gagal coba lagi\n"
+        "`$jesen` - Gacha hari ini\n"
+        "`$boni` - Lance atau Ling\n"
+        "`$ferdi` - Menunggu menit 7\n"
+        "`$giparen` - Lu marah?\n"
+        "`$el` - Stop main genshin\n"
+        "`$sahur` - Ingfo sahur\n"
+        "`$wwz` - Ingfo mabar WWZ\n"
+        "`$valorant` - Ingfo perkopilorant\n"
+        "`$last war` - Pujian game terbaik\n"
+        "`$validasi` - Spamming validasi\n"
+        "`$meowtler` - Hitler reference\n"
+        "`$meowtob` - Tobi tob\n"
+        "`$meowcina` - Kalimat Cina\n"
+    )
+    await interaction.response.send_message(help_text)
 
 
 @client.tree.command(name="brainrot", description="Kata-kata")
