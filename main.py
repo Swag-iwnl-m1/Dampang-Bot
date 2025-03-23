@@ -13,6 +13,11 @@ GUILD_ID = 1166227158805516400
 
 intents = discord.Intents.default()
 intents.message_content = True 
+intents.messages = True 
+intents.guilds = True
+intents.members = True 
+
+bot = commands.Bot(command_prefix="$", intents=intents)
 
 Brainrot = [
       "Berlele", "Ariz ajalah", "Abyan caboel", "Ariz mabok", "Boni Hyper", 
@@ -27,6 +32,15 @@ Brainrot_gambar = [
     "Brainrot_gambar/gambar1.jpeg",
     "Brainrot_gambar/gambar2.jpeg"
 ]
+
+kata_kasar = [
+
+    "anjing","bangsat","babi",
+    "rajungan"
+]
+
+warnings = {} 
+
 
 class MyClient(commands.Bot):
     def __init__(self):
@@ -43,15 +57,23 @@ class MyClient(commands.Bot):
     async def on_ready(self):
         print(f'✅ Logged in as {self.user}')
 
+
     async def on_message(self, message):
         if message.author == self.user:
             return
+        
+        if message.author == bot.user:
+            return   
+        
+        if any(word in message.content.lower() for word in kata_kasar):
+            await message.delete()  
+            await message.channel.send(f"{message.author.mention}, Ketikan dijaga BLOK!")
 
         if message.content.startswith('$hello'):
-            await message.channel.send(f'Halo {message.author} apa kabar')
+            await message.channel.send(f'Halo {message.author.mention} apa kabar')
 
         if message.content.startswith('$baik'):
-            await message.channel.send(f'Semoga {message.author} selalu diberi kesehatan oleh Tuhan Yang Maha Kuasa')
+            await message.channel.send(f'Semoga {message.author.mention} selalu diberi kesehatan oleh Tuhan Yang Maha Kuasa')
 
         if message.content.startswith('$sombong lu byan'):
             await message.channel.send(f'Apalah')
@@ -63,37 +85,37 @@ class MyClient(commands.Bot):
             await message.channel.send(f'Harith') 
 
         if message.content.startswith('$parah lu byan'):
-            await message.channel.send(f'Apalah si {message.author}')
+            await message.channel.send(f'Apalah si {message.author.mention}')
 
         if message.content.startswith('$abyan'):
-            await message.channel.send(f'Ingat {message.author} awal bukanlah akhir')
+            await message.channel.send(f'Ingat {message.author.mention} awal bukanlah akhir')
 
         if message.content.startswith('$abyan'):
-            await message.channel.send(f'Ingat {message.author} awal bukanlah akhir')
+            await message.channel.send(f'Ingat {message.author.mention} awal bukanlah akhir')
 
         if message.content.startswith('$ariz'):
             await message.channel.send(f'Login emel @Everyone')
 
         if message.content.startswith('$aryadi'):
-            await message.channel.send(f'{message.author} Serlok tak parani')
+            await message.channel.send(f'{message.author.mention} Serlok tak parani')
 
         if message.content.startswith('$johta'):
-            await message.channel.send(f'Cepatkan Tobat {message.author}')
+            await message.channel.send(f'Cepatkan Tobat {message.author.mention}')
 
         if message.content.startswith('$helmy'):
-            await message.channel.send(f'{message.author} Gagal coba lagi {message.author} Gagal coba lagi... @Everyone GAGALL COBA LAGI')
+            await message.channel.send(f'{message.author.mention} Gagal coba lagi {message.author.mention} Gagal coba lagi... @Everyone GAGALL COBA LAGI')
 
         if message.content.startswith('$jesen'):
             await message.channel.send(f'Gacha Apa Hari ini ? @Everyone')
 
         if message.content.startswith('$boni'):
-            await message.channel.send(f'{message.author} mau liat Lance atau Ling?')
+            await message.channel.send(f'{message.author.mention} mau liat Lance atau Ling?')
 
         if message.content.startswith('$ferdi'):
-            await message.channel.send(f'Tunggu menit 7 {message.author} aku akan kembali')
+            await message.channel.send(f'Tunggu menit 7 {message.author.mention} aku akan kembali')
 
         if message.content.startswith('$giparen'):
-            await message.channel.send(f'Lu marah? {message.author}')
+            await message.channel.send(f'Lu marah? {message.author.mention}')
 
         if message.content.startswith('$el'):
             await message.channel.send(f'Cukup jangan main genshin lagi @Everyone')
@@ -111,10 +133,10 @@ class MyClient(commands.Bot):
             await message.channel.send(f'ingfokan perobloxan @Everyone')
 
         if message.content.startswith('$last war'):
-            await message.channel.send(f'Inilah gem terbaik, selamat {message.author} anda telah mencapai titik tertinggi pergamingan duniawi terutama game Mobile. {message.author} berbahagialah anda sudah termasuk 1% orang yang berkesempatan untuk memainkan game terbaik di dunia ini. Jangan lupa kalo di toiet main apa? @Everyone LAST WAR LAH !!!')
+            await message.channel.send(f'Inilah gem terbaik, selamat {message.author.mention} anda telah mencapai titik tertinggi pergamingan duniawi terutama game Mobile. {message.author.mention} berbahagialah anda sudah termasuk 1% orang yang berkesempatan untuk memainkan game terbaik di dunia ini. Jangan lupa kalo di toiet main apa? @Everyone LAST WAR LAH !!!')
 
         if message.content.startswith('$validasi'):
-            await message.channel.send(f'{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}{message.author}') 
+            await message.channel.send(f'{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}{message.author.mention}') 
 
         if message.content.startswith('$meowtler'):
             await message.channel.send(f'DAS WAR EIN BEFEHL! DER ANGRIFF STEINER WAR EIN BEFEHL !!!') 
@@ -298,6 +320,7 @@ async def help_command(interaction: discord.Interaction):
 @client.tree.command(name="brainrot", description="Kata-kata")
 async def say_hello(interaction: discord.Interaction):
     await interaction.response.send_message(random.choice(Brainrot))
+
 
 @client.tree.command(name="gambar_brainrot", description="gambar-gambar lucu")
 async def brainrot_image(interaction: discord.Interaction):
