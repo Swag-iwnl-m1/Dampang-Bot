@@ -36,7 +36,7 @@ Brainrot_gambar = [
 kata_kasar = [
 
     "anjing","bangsat","babi",
-    "rajungan"
+    "rajungan","memek","ngentot"
 ]
 
 warnings = {} 
@@ -145,7 +145,10 @@ class MyClient(commands.Bot):
             await message.channel.send(f'Tob tobi tob tob tobi tob tob tobi tob tob tobaliy') 
 
         if message.content.startswith('$meowcina'):
-            await message.channel.send(f'将大局逆转吧!')    
+            await message.channel.send(f'将大局逆转吧!')  
+
+        if message.content.startswith('$mikel'):
+            await message.channel.send(f'Pakar jomok')        
     
                      
 
@@ -313,6 +316,7 @@ async def help_command(interaction: discord.Interaction):
         "`$meowtler` - Hitler reference\n"
         "`$meowtob` - Tobi tob\n"
         "`$meowcina` - Kalimat Cina\n"
+        "`$mikel` - mikel???\n"
     )
     await interaction.response.send_message(help_text)
 
