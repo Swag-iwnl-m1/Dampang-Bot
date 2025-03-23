@@ -148,7 +148,11 @@ class MyClient(commands.Bot):
             await message.channel.send(f'将大局逆转吧!')  
 
         if message.content.startswith('$mikel'):
-            await message.channel.send(f'Pakar jomok')        
+            await message.channel.send(f'Pakar jomok')
+
+        if message.content.startswith('$imanuel'):
+            await message.channel.send(f'<@{584349766520012800}><@{584349766520012800}><@{584349766520012800}><@{584349766520012800}><@{584349766520012800}> CUKUP IMANUEL!')        
+                
     
                      
 
@@ -317,6 +321,7 @@ async def help_command(interaction: discord.Interaction):
         "`$meowtob` - Tobi tob\n"
         "`$meowcina` - Kalimat Cina\n"
         "`$mikel` - mikel???\n"
+        "`$imanuel` - menghentikan aksi imanuel\n"
     )
     await interaction.response.send_message(help_text)
 
