@@ -341,6 +341,7 @@ async def help_command(interaction: discord.Interaction):
         "`$meowcina` - Kalimat Cina\n"
         "`$mikel` - mikel???\n"
         "`$imanuel` - menghentikan aksi imanuel\n"
+        "`$azril` - dialog tukang cukur\n"
     )
     await interaction.response.send_message(help_text)
 
