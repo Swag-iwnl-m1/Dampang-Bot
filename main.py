@@ -145,13 +145,32 @@ class MyClient(commands.Bot):
             await message.channel.send(f'Tob tobi tob tob tobi tob tob tobi tob tob tobaliy') 
 
         if message.content.startswith('$meowcina'):
-            await message.channel.send(f'将大局逆转吧!')  
+            await message.channel.send(f'将大局逆转吧!')
+
+        if message.content.startswith('$azril'):
+            await message.channel.send(f"""
+        Andriana:Aduh gantengnya😋 
+        <@{1132523045588828161}>:najis bisa dipercepat gak🤨
+        Andriana:Sabar yak <@{1132523045588828161}> aku lagi cari posisi yang nyaman nih buat cukur bulu bulu you😊
+        <@{1132523045588828161}>:Om jagan om jangan om
+        Andriana:Muuuuuach😘 
+        <@{1132523045588828161}>:Bauk arang tekok kaunam😡
+        Andriana:Kau ni anak mana sih <@{1132523045588828161}> kok lucu bener yah😊, mau ndak ngerasain rudal aku🥰
+        <@{1132523045588828161}>:Tohapok kau wak, Jangan begitu lah bang nanti orang gak mau gunting sini lagi. kapok anak orang 
+        digitukan bah
+        <@{584349766520012800}>:Andre masih lama kah? 
+        Andriana:Sebentar loh ya, ada customer ganteng nih
+        <@{584349766520012800}>:Oh, ok ndre
+        Andriana:Pukimak kau ye namaku bukan Andre tapi Andriana😡
+
+
+                                         """)       
 
         if message.content.startswith('$mikel'):
-            await message.channel.send(f'Pakar jomok')
+            await message.channel.send(f'<@{485431664110075905}> Pakar jomok')
 
         if message.content.startswith('$imanuel'):
-            await message.channel.send(f'<@{584349766520012800}><@{584349766520012800}><@{584349766520012800}><@{584349766520012800}><@{584349766520012800}> CUKUP IMANUEL!')        
+            await message.channel.send(f'<@{584349766520012800}> <@{584349766520012800}> <@{584349766520012800}> <@{584349766520012800}> <@{584349766520012800}> CUKUP IMANUEL!')        
                 
     
                      
