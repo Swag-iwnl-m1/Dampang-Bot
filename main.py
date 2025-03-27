@@ -10,6 +10,9 @@ import yt_dlp as youtube_dl
 # ID server discord
 GUILD_ID = 1166227158805516400 
 
+#LOG channer discord
+log_ID = 1354830141297262922
+
 
 intents = discord.Intents.default()
 intents.message_content = True 
@@ -36,7 +39,8 @@ Brainrot_gambar = [
 kata_kasar = [
 
     "anjing","bangsat","babi",
-    "rajungan","memek","ngentot"
+    "rajungan","memek","ngentot",
+    "kontol"
 ]
 
 warnings = {} 
@@ -374,7 +378,32 @@ async def meme(interaction: discord.Interaction):
             await interaction.response.send_message("❌ Gagal mengambil meme.")
 
     except Exception as e:
-        await interaction.response.send_message(f"❌ Terjadi kesalahan: {e}")        
+        await interaction.response.send_message(f"❌ Terjadi kesalahan: {e}")       
+
+@client.event
+async def on_message_delete(message):
+    log = discord.utils.get(message.guild.text_channels, name="log")
+    if log:
+        await log.send(f"Pesan dari {message.author.mention} di {message.channel.mention} dihapus:\n>>> {message.content}")
+
+@client.event
+async def on_member_join(member):
+    log = client.get_channel(log_ID)
+    if log:
+        await log.send(f'✅ {member} baru saja bergabung ke server!')
+
+@client.event
+async def on_member_remove(member):
+    log = client.get_channel(log_ID)
+    if log:
+        await log.send(f'❌ {member} telah keluar atau di-kick dari server.')
+
+@client.event
+async def on_member_update(before, after):
+    log = client.get_channel(log_ID)
+    if log:
+        if before.roles != after.roles:
+            await log.send(f'🔄 {after} mendapatkan perubahan role.')         
 
 
 
